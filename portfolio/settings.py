@@ -122,11 +122,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 #develop mode
-STATIC_ROOT = 'static'
+# STATIC_ROOT = 'static'
 
 
 #production mode
-# STATIC_ROOT = "/home/alireza0631/portfolio/static"
+STATIC_ROOT = "/home/alireza0631/portfolio/static"
 # or, eg,
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
