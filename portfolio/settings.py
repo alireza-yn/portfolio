@@ -39,10 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'contact',
     'home',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -120,11 +122,11 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 #develop mode
-# STATIC_ROOT = 'static'
+STATIC_ROOT = 'static'
 
 
 #production mode
-STATIC_ROOT = "/home/alireza0631/portfolio/static"
+# STATIC_ROOT = "/home/alireza0631/portfolio/static"
 # or, eg,
 # STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
@@ -133,3 +135,17 @@ STATIC_ROOT = "/home/alireza0631/portfolio/static"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CORS_ALLOWED_ORIGINS = [
+    # "http://localhost:3000",  # برای توسعه Next.js
+    "https://alirezayn.vercel.app",
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = [
+    "authorization",
+    "content-type",
+    "x-csrf-token",
+]
