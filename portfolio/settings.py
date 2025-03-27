@@ -124,7 +124,7 @@ USE_TZ = True
 
 
 #production mode
-STATIC_ROOT = "/home/myusername/myproject/static"
+STATIC_ROOT = "/home/alireza0631/portfolio/static"
 # or, eg,
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
